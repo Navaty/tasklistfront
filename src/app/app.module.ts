@@ -8,6 +8,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ProjectsComponent } from './components/projects/projects.component';
 
 
@@ -25,7 +27,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
     MatCardModule,
     MatListModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

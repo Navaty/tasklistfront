@@ -5,8 +5,8 @@
       <mat-card-title>{{ project.title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <mat-selection-list (selectionChange)='onTaskChange($event)'>
-        <mat-list-option  checkboxPosition='before' value='{{todo.id}}}' selected={{todo.isComplited}} *ngFor="let todo of project.todos">
+      <mat-selection-list>
+        <mat-list-option  checkboxPosition='before' (click)="onTaskChange(todo, project.id)" value={{todo}}} selected={{todo.isComplited}} *ngFor="let todo of project.todos">
           {{todo.text}}
         </mat-list-option>
       </mat-selection-list>

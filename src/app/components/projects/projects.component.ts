@@ -18,8 +18,10 @@ export class ProjectsComponent implements OnInit {
       this.projects = projects;
     });
   }
-  onTaskChange(event){
-    console.log(event);
+  onTaskChange(todo, projectId){
+    todo.isComplited = !todo.isComplited;
+    this.projectService.toggleComplited(todo, projectId).subscribe(rtodo =>
+    console.log(rtodo));
   }
 }
 
